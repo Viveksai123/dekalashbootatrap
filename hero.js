@@ -4,7 +4,7 @@ const reviewsData = [
     name: "M M",
     date: "15 days ago",
     review: "Tina did an amazing hybrid wispy cat eye set on me. The process was smooth, and the final look exceeded my expectations. I've already received so many compliments, and I can't wait to return for a touch-up. The environment at the salon was so relaxing, with soft music playing in the background, and the team was incredibly accommodating. I especially appreciated how Tina explained each step of the process and gave me tips on maintaining my lashes for a longer-lasting effect. It's not just about the lashes; it's about the overall experience, and this place delivers it all.",
-    stars: 5,
+    stars: 4,
     platform: "Google",
     backgroundImage: "./img/image/bg1.png",
     mobileBackgroundImage: "./img/image/bg6.png"
@@ -24,7 +24,7 @@ const reviewsData = [
     name: "Jane S",
     date: "10 days ago",
     review: "Loved the lashes, will definitely come back! The team was super professional and created a custom look that perfectly suited my face. It was my first time trying lash extensions, and I'm so happy I chose them. They used top-notch products, and the process was completely painless. I also loved how they took the time to educate me on aftercare to ensure my lashes stay perfect for weeks. The salon ambiance was cozy and inviting, making the entire experience a delight. Thank you for making me feel so confident!",
-    stars: 5,
+    stars: 4,
     platform: "Facebook",
     backgroundImage: "./img/image/bg4.png",
     mobileBackgroundImage: "./img/image/bg8.png"
@@ -44,7 +44,7 @@ const reviewsData = [
     name: "Anna K",
     date: "1 month ago",
     review: "Best experience ever! I've been to several lash studios, but none compare to the quality and expertise here. My lashes look natural yet glamorous, and they lasted much longer than I expected. The team's professionalism and friendly attitude made a huge difference. They were attentive to my needs and even gave me a personalized consultation to determine the best style for my face. The salon itself is beautifully designed, adding to the luxurious experience. I'm beyond impressed and can't wait for my next appointment.",
-    stars: 5,
+    stars: 4,
     platform: "Facebook",
     backgroundImage: "./img/image/bg1.png",
     mobileBackgroundImage: "./img/image/bg6.png"
@@ -54,7 +54,7 @@ const reviewsData = [
     name: "Mike L",
     date: "3 days ago",
     review: "Highly recommend their services. The stylist was incredibly skilled and patient, ensuring I was happy with the outcome. I've already booked my next appointment and shared their details with my friends. What stood out to me the most was the attention to detail and the genuine care the team showed throughout the session. They didn't just focus on completing the job quickly; they ensured it was done perfectly. The aftercare tips they provided were also extremely helpful, making it easy for me to maintain my new look. This is hands down the best lash studio I've visited!",
-    stars: 5,
+    stars: 4,
     platform: "Google",
     backgroundImage: "./img/image/bg4.png",
     mobileBackgroundImage: "./img/image/bg8.png"
