@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="utf-8" />
+    <link rel="icon" href="img/image/logo.webp" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Dekalash"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.webp" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+ 
+    <title>Dekalash - Ranked #1 in Lash & Brow services by Entrepreneu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        .logo {
+            width: 200px;
+        }
+        .star {
+            color: #facc15;
+        }
+        .bg-overlay {
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), transparent);
+        }
+        @keyframes marquee {
+    0% { transform: translateX(90%); }
+    100% { transform: translateX(-80%); }
+}
+body{
+    overflow-x: hidden;
+}
+.animate-marquee {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .scale-in {
+            animation: scaleIn 0.5s ease-out;
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .image-container {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+#home {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0); */
+  
+}
+
+/* Fix for iOS form zoom */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px !important;
+    line-height: 16px;
+  }
+}
+        
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class=" text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap flex-row justify-between ">
+        <!-- Social Icons -->
+        <div class="flex space-x-4 mb-2 md:mb-0  d-flex flex-row">
+            <a href="#" class="text-black hover:text-gray-600 transition-colors">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-black hover:text-gray-600 transition-colors">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="text-black hover:text-gray-600 transition-colors">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-black hover:text-gray-600 transition-colors">
+                <i class="fab fa-tiktok"></i>
+            </a>
+         </div>
+          <div>
+            <a href="#" class="text-black hover:text-gray-600 transition-colors">
+                <i class="fas fa-phone-alt rotate-90 mr-2"></i>+1 (336) 422-0626
+            </a>
+          </div>
+        <!-- Shipping Info -->
+       
+    </div>
+
+</header>
+<div class="sticky top-0 z-50">
+<!-- <div class="relative flex flex-col justify-center items-center overflow-hidden w-[100vw] bg-black h-[40px] ">
+    <div class="absolute w-full animate-marquee text-white ">
+        <span class="font-bold"></span> Get Your First Full Set of Lashes for 
+        <span class="font-bold">$99.99</span>
+    </div>
+</div> -->
+    <div class="bg-white text-black flex items-center justify-center px-4 py-2 text-sm ">
+        <img src="./img/image/logo.png" alt="logo" class="logo" />
+    </div>
+</div>
+
+<div class="bg-pink-50 min-h-screen py-12 px-6 flex items-center justify-center">
+    <div class="bg-white shadow-lg rounded-3xl p-8 max-w-4xl w-full">
+      <h1 class="text-4xl font-bold text-pink-600 mb-6 text-center">Privacy Policy</h1>
+      <p class="text-gray-700 text-sm text-center mb-6">Effective Date: February 06, 2025</p>
+  
+      <p class="text-gray-700 text-lg leading-relaxed mb-4">
+        At <span class="text-pink-500 font-medium">Dekalash Winston-Salem</span>, we are dedicated to protecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website or interact with our services.
+      </p>
+  
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1 4v4m4-5a3 3 0 100-6 3 3 0 000 6zm0 4h.01M6 10h.01M6 14h.01M6 18h.01M6 6h.01" />
+        </svg>
+        Information We Collect
+      </h3>
+      <p class="text-gray-600 mb-4">
+        When you visit our website or engage with us, we may collect the following information:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+        <li><span class="font-bold text-gray-700">Personal Information:</span> Name, Email Address, Phone Number, Information provided through forms or inquiries</li>
+        <li><span class="font-bold text-gray-700">Non-Personal Information:</span> Browser data, IP address, cookies, and general location data</li>
+      </ul>
+  
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        How We Use Your Information
+      </h3>
+      <p class="text-gray-600 mb-4">
+        We collect and use your information to:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+        <li>Schedule and manage appointments</li>
+        <li>Respond to inquiries and provide customer support</li>
+        <li>Improve our website and services</li>
+        <li>Send promotional updates (with consent)</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Cookies and Tracking Technologies
+      </h3>
+      <p class="text-gray-600 mb-4">
+        We use cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and personalize your experience. You can manage your cookie preferences through your browser settings.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        How We Share Your Information
+      </h3>
+      <p class="text-gray-600 mb-4">
+        We do not sell your personal information. We may share your information with trusted service providers, such as:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+        <li>Marketing and analytics services</li>
+        <li>Customer service platforms</li>
+        <li>Legal authorities, if required</li>
+      </ul>
+
+      
+      
+  
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.4V11a6.002 6.002 0 00-5-5.917V4a2 2 0 10-4 0v1.083A6.002 6.002 0 004 11v3.4c0 .517-.195 1.03-.595 1.405L2 17h5m8-10h.01M12 11v3m-4 0h8" />
+        </svg>
+        Data Security
+      </h3>
+      <p class="text-gray-600 mb-4">
+        We implement appropriate security measures to protect your data. However, no transmission over the internet is completely secure.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Your Rights
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Depending on your location, you may have rights under applicable privacy laws, such as:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+        <li>Accessing your personal information</li>
+      <li>Requesting corrections</li>
+      <li>Requesting deletion of your data</li>
+      <li>Opting out of marketing communications</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Third-Party Links
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Children’s Privacy
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Our services are not directed to individuals under the age of 13. We do not knowingly collect personal data from children.
+    </p>
+
+    <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Updates to This Policy
+      </h3>
+      <p class="text-gray-600 mb-4">
+        We may update this Privacy Policy periodically. Changes will be posted on this page with a revised effective date.
+    </p>
+     
+  
+      <h3 class="text-2xl font-semibold text-pink-500 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m-6 4h7m-6 4h7M3 6h11" />
+        </svg>
+        Contact Us
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Dekalash, 1247 Creekshire Way, Suite 12<br />
+        Phone: +1 (336) 422-0626
+      </p>
+  
+      <div class="flex justify-between mt-6">
+        <a href="index.html" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-800 hover:no-underline transition-all text-center">Agree & Exit</a>
+       
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+   <!-- Footer Section -->
+   <footer class="bg-white flex flex-col md:flex-row justify-between items-center text-white px-3 py-3">
+    <!-- Brand Name -->
+    <div class="bg-white text-black flex items-center justify-center px-4 py-2 text-sm ">
+        <img src="./img/image/logo.png" alt="logo" class="logo" />
+    </div>
+
+    <!-- Copyright Info -->
+     <div class="gap-4 flex">
+        <a href="index.html" class="text-sm md:text-base mt-2 md:mt-0 text-center text-black no-underline hover:text-pink-500 hover:no-underline">
+            Home
+          </a>
+          
+    <p class="text-sm md:text-base mt-2 md:mt-0 text-center text-black">
+        &copy; 2025 Deka Lash Franchise, LLC
+    </p>
+     </div>
+</footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="script.js"></script>
+<script src="hero.js"></script>
+<script src="header.js"></script>
+</body>
+</html>

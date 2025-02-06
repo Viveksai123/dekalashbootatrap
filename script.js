@@ -41,3 +41,27 @@ function resetForm() {
   document.getElementById('thankYouMessage').classList.add('hidden');
   document.getElementById('offerForm').reset();
 }
+
+
+function validateForm() {
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const phoneNumber = document.getElementById("phoneNumber").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const terms = document.getElementById("terms").checked;
+  const marketing = document.getElementById("marketing").checked;
+  const support = document.getElementById("support").checked;
+
+  const submitButton = document.getElementById("submitButton");
+
+  // Check if all inputs and checkboxes are filled/checked
+  if (firstName && lastName && phoneNumber && email && terms && marketing && support) {
+    submitButton.disabled = false;
+    submitButton.classList.remove("bg-gray-300", "text-gray-500", "cursor-not-allowed");
+    submitButton.classList.add("bg-pink-500", "text-white", "hover:bg-pink-600", "transform", "hover:scale-105");
+  } else {
+    submitButton.disabled = true;
+    submitButton.classList.add("bg-gray-300", "text-gray-500", "cursor-not-allowed");
+    submitButton.classList.remove("bg-pink-500", "text-white", "hover:bg-pink-600", "transform", "hover:scale-105");
+  }
+}

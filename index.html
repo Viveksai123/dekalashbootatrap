@@ -11,13 +11,13 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Dekalash"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.webp" />
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
  
-    <title>Dekalash</title>
+    <title>Dekalash - Ranked #1 in Lash & Brow services by Entrepreneu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -87,8 +87,8 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
+  /* transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0); */
   
 }
 
@@ -153,7 +153,7 @@ body{
                 </div>
             </div>
             <hr class="border-white" />
-            <div class="d-flex flex-row justify-between items-center">
+            <div class="d-flex flex-col md:flex-row justify-between items-center">
             <div id="reviewStars" class="flex space-x-1 text-yellow-500"></div>
             <div class="mr-2 d-flex gap-1">Avg Rating : <span class="text-yellow-400">4.8</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
                 <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
@@ -170,56 +170,73 @@ body{
         </div>
 
         <div class="bg-transparent flex items-center justify-center min-h-screen p-4">
-            <div id="formContainer" class="relative z-10 bg-white/60 backdrop-blur-xl rounded-3xl shadow-2xl p-6 w-[100vw] max-w-xs md:max-w-sm lg:max-w-lg mx-auto text-black mt-6 overflow-hidden fade-in-up"><h2 class="text-3xl font-bold text-center text-gray-800 mb-3">LIVE MASCARA FREE</h2>
-                <p class="text-center text-gray-600 mb-6">
-                    Regular price <span class="line-through">$179.99</span><span> $99.99</span>
-                    <span class="text-pink-600 font-semibold">- limited time only</span>
-                </p>
-                <form id="offerForm" class="space-y-4">
-                    <input type="text" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
-                    <input type="text" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
-                    <div class="flex items-center">
-                        <select class="p-3 border border-gray-300 rounded-l-lg bg-gray-100 focus:ring-2 focus:ring-pink-500">
-                            <option value="+1">🇺🇸 +1</option>
-                            <option value="+91">🇮🇳 +91</option>
-                            
-                            <option value="+44">🇬🇧 +44</option>
-                            <option value="+61">🇦🇺 +61</option>
-                            <option value="+86">🇨🇳 +86</option>
-                            <option value="+81">🇯🇵 +81</option>
-                            <option value="+49">🇩🇪 +49</option>
-                        </select>
-                        <input 
-                            type="tel" 
-                            placeholder="Enter phone number" 
-                            class="w-full p-3 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" 
-                            required
-                        >
-                     </div>
-                    <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
-                    <button type="submit" class="w-full bg-pink-500 text-white font-bold py-3 rounded-lg hover:bg-pink-600 transition-all transform hover:scale-105">
-                        Get My Offer
-                    </button>
-                </form>
-                <div id="thankYouMessage" class="hidden text-center">
-                    <div class="mb-6">
-                        <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto scale-in">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-3xl font-bold text-gray-800 mb-2">Thank You!</p>
-                    <p class="text-lg text-gray-600 mb-6">Your offer has been submitted successfully.</p>
-                    <button onclick="resetForm()" class="bg-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-pink-600 transition-all transform hover:scale-105">
-                        Another Response
-                    </button>
+            <div id="formContainer" class="relative z-10 bg-white/60 backdrop-blur-xl rounded-3xl shadow-2xl p-6 w-[100vw] max-w-xs md:max-w-sm lg:max-w-lg mx-auto text-black mt-6 overflow-hidden fade-in-up">
+              <h2 class="text-3xl font-bold text-center text-gray-800 mb-3">LIVE MASCARA FREE</h2>
+              <p class="text-center text-gray-600 mb-6">
+                Regular price <span class="line-through">$179.99</span><span> $99.99</span>
+                <span class="text-pink-600 font-semibold">- limited time only</span>
+              </p>
+              <form id="offerForm" class="space-y-4" oninput="validateForm()">
+                <input type="text" id="firstName" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
+                <input type="text" id="lastName" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
+                <div class="flex items-center">
+                  <select id="countryCode" class="p-3 border border-gray-300 rounded-l-lg bg-gray-100 focus:ring-2 focus:ring-pink-500">
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+86">🇨🇳 +86</option>
+                    <option value="+81">🇯🇵 +81</option>
+                    <option value="+49">🇩🇪 +49</option>
+                  </select>
+                  <input type="tel" id="phoneNumber" placeholder="Enter phone number" class="w-full p-3 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
                 </div>
-                <p class="text-sm text-center text-gray-500 mt-6">Offer will be sent via SMS</p>
-            </div>
-        
+                <input type="email" id="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
           
-        </div>
+                <!-- Checkbox Sections -->
+                <div class="space-y-2 text-sm text-gray-700">
+                  <div class="flex items-start">
+                    <input type="checkbox" id="terms" class="mt-1 mr-2">
+                    <label for="terms" class="text-gray-600">
+                      I agree to the terms & conditions and the privacy policy as documented <a href="#" class="text-pink-500 underline">here</a>.
+                    </label>
+                  </div>
+                  <div class="flex items-start">
+                    <input type="checkbox" id="marketing" class="mt-1 mr-2">
+                    <label for="marketing" class="text-gray-600">
+                      I agree to receive marketing text messages once a week regarding sales and other promotional events at the phone number provided above. Message & data rates may apply.
+                    </label>
+                  </div>
+                  <div class="flex items-start">
+                    <input type="checkbox" id="support" class="mt-1 mr-2">
+                    <label for="support" class="text-gray-600">
+                      I agree to receive customer support text messages for the orders placed. Message & data rates may apply.
+                    </label>
+                  </div>
+                </div>
+          
+                <button id="submitButton" type="submit" disabled class="w-full bg-gray-300 text-gray-500 font-bold py-3 rounded-lg cursor-not-allowed transition-all">
+                  Get My Offer
+                </button>
+              </form>
+              <div id="thankYouMessage" class="hidden text-center">
+                <div class="mb-6">
+                  <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto scale-in">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-3xl font-bold text-gray-800 mb-2">Thank You!</p>
+                <p class="text-lg text-gray-600 mb-6">Your offer has been submitted successfully.</p>
+                <button onclick="resetForm()" class="bg-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-pink-600 transition-all transform hover:scale-105">
+                  Another Response
+                </button>
+              </div>
+              <p class="text-sm text-center text-gray-500 mt-6">Offer will be sent via SMS</p>
+            </div>
+          </div>
+          
     </section>
 
 
@@ -232,7 +249,7 @@ body{
                     Lashes as unique as you
                 </h3>
                 <p class="text-gray-800 text-base leading-relaxed">
-                    Experience the magic of our lash stylists who specialize in creating unique lash designs tailored to your individual style. Our TrueXpress lashes creates a light-volume look with natural-looking length with a full set in half the time of a standard volume appointment. 
+                    Experience the magic of our lash stylists who specialize in creating unique lash designs tailored to your individual style. Our TrueXpress lashes create a light-volume look with natural-looking length with a full set in half the time of a standard volume appointment. 
                 </p>
             </div>
 
@@ -254,7 +271,7 @@ body{
                     Get the lashes that fit you
                 </h3>
                 <p class="text-gray-800 text-base leading-relaxed">
-                    Our Lash Stylists specialize in designing TrueXpress, Hybrid, Volume, and Mega Volume Lashes. Our lightweight eyelash extensions are so comfortable and feel so natural, you'll forget you have them, but everyone else is sure to notice your beautiful New Confidence.
+                    Our lash stylists specialize in designing TrueXpress, Hybrid, Volume, and Mega Volume Lashes. Our lightweight eyelash extensions are so comfortable and feel so natural, you'll forget you have them, but everyone else is sure to notice your beautiful new confidence.
                 </p>
             </div>
 
@@ -417,9 +434,15 @@ body{
         </div>
 
         <!-- Copyright Info -->
+         <div class="gap-4 flex">
+            <a href="privacy.html" class="text-sm md:text-base mt-2 md:mt-0 text-center text-black no-underline hover:text-pink-500 hover:no-underline">
+                Privacy & Policy
+              </a>
+              
         <p class="text-sm md:text-base mt-2 md:mt-0 text-center text-black">
             &copy; 2025 Deka Lash Franchise, LLC
         </p>
+         </div>
     </footer>
 </div>
 
