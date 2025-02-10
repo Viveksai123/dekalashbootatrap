@@ -143,8 +143,10 @@ body{
         <img src="./img/image/logo.png" alt="logo" class="logo" />
     </div>
 </div>
+
+
     <section id="home" class="relative flex flex-col-reverse xl:flex-row xl:justify-between items-center px-6 md:px-12 lg:px-24 min-h-screen bg-cover bg-center bg-fixed text-white bg-overlay">
-        <div id="reviewBox" class="mt-4 relative z-10 space-y-4 max-w-md p-6 bg-black/30 backdrop-blur-md rounded-2xl text-white">
+        <div id="reviewBox" class="mt-4 relative z-10 space-y-4 max-w-md p-6 bg-black/30 backdrop-blur-md rounded-2xl text-white mb-3">
             <div class="flex items-start space-x-3">
                 <div id="reviewerInitial" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-xl font-semibold text-gray-600"></div>
                 <div>
@@ -193,31 +195,36 @@ body{
                 </div>
                 <input type="email" id="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all" required>
           
+                <button id="submitButton" type="submit" disabled class="w-full bg-gray-300 text-gray-500 font-bold py-3 rounded-lg cursor-not-allowed transition-all">
+                    Get My Offer
+                  </button>
                 <!-- Checkbox Sections -->
                 <div class="space-y-2 text-sm text-gray-700">
-                  <div class="flex items-start">
-                    <input type="checkbox" id="terms" class="mt-1 mr-2">
-                    <label for="terms" class="text-gray-600">
-                      I agree to the terms & conditions and the privacy policy as documented <a href="#" class="text-pink-500 underline">here</a>.
-                    </label>
+                    <div class="flex items-start">
+                      <input type="checkbox" id="terms" class="mt-1 mr-2" checked>
+                      <label for="terms" class="text-gray-600">
+                        I agree to the terms & conditions and the privacy policy as documented 
+                        <a href="#" class="text-pink-500 underline">here</a>.
+                      </label>
+                    </div>
+                    <div class="flex items-start">
+                      <input type="checkbox" id="marketing" class="mt-1 mr-2" checked>
+                      <label for="marketing" class="text-gray-600">
+                        I agree to receive marketing text messages once a week regarding sales and other 
+                        promotional events at the phone number provided above. Message & data rates may apply.
+                      </label>
+                    </div>
+                    <div class="flex items-start">
+                      <input type="checkbox" id="support" class="mt-1 mr-2" checked>
+                      <label for="support" class="text-gray-600">
+                        I agree to receive customer support text messages for the orders placed. 
+                        Message & data rates may apply.
+                      </label>
+                    </div>
                   </div>
-                  <div class="flex items-start">
-                    <input type="checkbox" id="marketing" class="mt-1 mr-2">
-                    <label for="marketing" class="text-gray-600">
-                      I agree to receive marketing text messages once a week regarding sales and other promotional events at the phone number provided above. Message & data rates may apply.
-                    </label>
-                  </div>
-                  <div class="flex items-start">
-                    <input type="checkbox" id="support" class="mt-1 mr-2">
-                    <label for="support" class="text-gray-600">
-                      I agree to receive customer support text messages for the orders placed. Message & data rates may apply.
-                    </label>
-                  </div>
-                </div>
+                  
           
-                <button id="submitButton" type="submit" disabled class="w-full bg-gray-300 text-gray-500 font-bold py-3 rounded-lg cursor-not-allowed transition-all">
-                  Get My Offer
-                </button>
+                
               </form>
               <div id="thankYouMessage" class="hidden text-center">
                 <div class="mb-6">
@@ -314,7 +321,7 @@ body{
     style="background-image: url('./img/image/bg5.jpeg'); background-position: 50% 25%; background-size: cover;"
 >
     <!-- Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-transparent to-black via-transparent bg-opacity-20"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-black to-black via-transparent bg-opacity-30"></div>
 
     <!-- Content -->
     <div class="relative z-10 space-y-4 max-w-md">
@@ -322,7 +329,7 @@ body{
         <h1 class="text-2xl md:text-5xl font-semibold leading-tight">
             Lash Lift & Tinting
         </h1>
-        <p class="text-gray-300 text-base md:text-lg">
+        <p class="text-base md:text-lg">
             Say goodbye to the hassle of lash curlers and hello to perfectly lifted lashes with Deka Lash.
             Our lash lift is an all-natural, semi-permanent application that boosts your natural lashes from the root, 
             giving them a curled, lengthened appearance. Perfect for when you take a break from lash extensions, 
@@ -422,7 +429,7 @@ body{
             </p>
 
             <!-- Button -->
-            <a href="https://dekalash.com/find-a-studio/" class="btn bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-pink-600 transition-all">
+            <a href="https://www.mytime.com/express_checkout/126800/154245?parent=true&version=v2&mobility=1&employeeGender=all" class="btn bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-pink-600 transition-all">
                 Book Now
             </a>
         </div>
