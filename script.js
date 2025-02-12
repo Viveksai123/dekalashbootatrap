@@ -1,6 +1,10 @@
 // Initialize the map
 const position = [36.0677, -80.3230];
-const map = L.map('map').setView(position, 13);
+// Add scrollWheelZoom: false to disable zoom on scroll
+const map = L.map('map', {
+  scrollWheelZoom: false,  // Disable scroll wheel zoom
+  zoomControl: true        // Keep the zoom controls visible
+}).setView(position, 13);
 
 // Add the OpenStreetMap tile layer
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -29,6 +33,18 @@ marker.bindPopup(`
     <img src="/api/placeholder/150/150" alt="Deka Lash Location" class="rounded-lg mt-2 shadow-md" />
   </div>
 `);
+
+// Optional: Add double-click to zoom functionality
+map.doubleClickZoom.enable();
+
+// Optional: Add a message to show users how to zoom
+const zoomMessage = L.control({position: 'bottomleft'});
+zoomMessage.onAdd = function (map) {
+    const div = L.DomUtil.create('div', 'zoom-message');
+    div.innerHTML = '<small class="bg-white/80 px-2 py-1 rounded-md">Use +/- buttons or double-click to zoom</small>';
+    return div;
+};
+zoomMessage.addTo(map);
 
 document.getElementById('offerForm').addEventListener('submit', function(e) {
   e.preventDefault();
