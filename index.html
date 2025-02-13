@@ -108,7 +108,13 @@ body{
   perspective: 1000;
 }
 
+
+
+
 #home {
+  background-image: url('/img/image/bg1.png'); /* Replace with actual image path */
+  animation: fadeBackground 12s infinite; /* Change every 4s */
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -117,6 +123,29 @@ body{
   -webkit-transform: translate3d(0,0,0);
   
 }
+@keyframes fadeBackground {
+    0% { background-image: url('/img/image/bg1.png'); }
+    33% { background-image: url('/img/image/bg2.png'); }
+    66% { background-image: url('/img/image/bg4.png'); }
+    100% { background-image: url('/img/image/bg2.png'); } /* Loop back */
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  #home {
+    background-image: url('/img/image/bg6.png'); /* Mobile image */
+    animation: fadeBackgroundMobile 12s infinite;
+  }
+
+  @keyframes fadeBackgroundMobile {
+      0% { background-image: url('/img/image/bg6.png'); }
+      33% { background-image: url('/img/image/bg7.png'); }
+      66% { background-image: url('/img/image/bg8.png'); }
+      100% { background-image: url('/img/image/bg6.png'); } /* Loop back */
+  }
+}
+
+
 
 /* Fix for iOS form zoom */
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
